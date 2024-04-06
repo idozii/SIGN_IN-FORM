@@ -1,0 +1,116 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+}
+
+body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background: url('./premium_photo-1669562728886-b2cc51a62e78.avif') center/cover no-repeat;
+}
+
+.container{
+     position: relative;
+     width: 350px;
+     border-radius: 15px;
+     overflow: hidden;
+     color: #fff;
+     background: rgba(22,22,22,0.01);
+     backdrop-filter: blur(35px);
+     box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+}
+
+.container .slider{
+     width: 200%;
+     position: relative;
+     display: flex;
+     transition: transform ease-out .3s;
+}
+
+#toggle{
+     display: none;
+}
+
+.container #toggle:checked + .slider{
+     transform: translateX(-50%);
+}
+
+.form{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 30px;
+     padding: 2rem;
+     width: 50%;
+}
+
+.title{
+     text-align: center;
+     font-size: 1.8rem;
+     font-weight: 600;
+}
+
+.input-box{
+     width: 100%;
+     position: relative;
+     overflow: hidden;
+}
+
+.input-box .label{
+     position: absolute;
+     top: 50%;
+     left: 10px;
+     transition: transform ease .2s;
+     transform: translate(0%, -50%);
+     font-size: 14px;
+     user-select: none;
+     pointer-events: none;
+}
+
+.input-box .input{
+     width: 100%;
+     border: none;
+     outline: none;
+     background: rgba(255,255,255,.25);
+     color: #fff;
+     padding: 0.6rem;
+     font-size: 14px;
+     border-radius: 5px;
+}
+
+.input-box .input:focus + .label,
+.input-box .input:valid + .label{
+     transform: translate(-150%, -50%);
+}
+
+button{
+     width: 100%;
+     border: none;
+     outline: none;
+     color: #fff;
+     padding: 0.6rem;
+     font-size: 14px;
+     font-weight: 600;
+     border-radius: 5px;
+     background: rgba(255,255,255,.25);
+     cursor: pointer;
+     transition: .2s ease;
+}
+
+button:hover{
+     background: rgba(255,255,255,.35);
+}
+
+.text{
+     font-size: 14px;
+}
+
+.text .switch{
+     font-weight: 600;
+     cursor: pointer;
+}
